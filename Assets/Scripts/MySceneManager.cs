@@ -13,8 +13,19 @@ public class My_Scene_Manager : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            int curentScene = SceneManager.GetActiveScene().buildIndex;
+            int curentScene = SceneManager.GetActiveScene().buildIndex + 1;
             SceneManager.LoadScene(curentScene % SceneManager.sceneCountInBuildSettings);
         }
+    }
+
+    public void LoadNextScene()
+    {
+        int curentScene = SceneManager.GetActiveScene().buildIndex + 1;
+        SceneManager.LoadScene(curentScene % SceneManager.sceneCountInBuildSettings);
+    }
+
+    public void LoadScene(int scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }

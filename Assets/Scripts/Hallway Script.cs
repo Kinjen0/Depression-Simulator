@@ -23,18 +23,21 @@ public class HallwayScript : MonoBehaviour
 
     private void Update()
     {
-        // Here we want to check the distance to each door, then we will update it as needed to ensure it stays the distance away at all times. 
-        float distanceToFarDoor = player.position.x - farDoor.position.x;
-        if (distanceToFarDoor < minimumDistance)
+        if (farDoor.transform.position.x >= 100)
         {
-            farDoor.position = new Vector3(player.position.x - minimumDistance, farDoor.position.y, farDoor.position.z);
-        }
-        
-        float distanceToCloseDoor =  closeDoor.position.x - player.position.x;
+            // Here we want to check the distance to each door, then we will update it as needed to ensure it stays the distance away at all times. 
+            float distanceToFarDoor = player.position.x - farDoor.position.x;
+            if (distanceToFarDoor < minimumDistance)
+            {
+                farDoor.position = new Vector3(player.position.x - minimumDistance, farDoor.position.y, farDoor.position.z);
+            }
 
-        if (distanceToCloseDoor > maximumDistance)
-        {
-            closeDoor.position = new Vector3(player.position.x + maximumDistance, closeDoor.position.y, closeDoor.position.z);
+            float distanceToCloseDoor = closeDoor.position.x - player.position.x;
+
+            if (distanceToCloseDoor > maximumDistance)
+            {
+                closeDoor.position = new Vector3(player.position.x + maximumDistance, closeDoor.position.y, closeDoor.position.z);
+            }
         }
     }
 
