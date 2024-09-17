@@ -292,6 +292,63 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &36714267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 34.34994
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 64.87499
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 906.43585
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 893336881089246791, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6171186211834880215, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
+      propertyPath: m_Name
+      value: PostProcessing Effect
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ee2e04e141f819a44896089a2f43d60f, type: 3}
 --- !u!65 &89418112
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6297,6 +6354,10 @@ PrefabInstance:
       propertyPath: m_EnableFarCasting
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3229012808228254544, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3406344995468409661, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 33
@@ -6312,6 +6373,22 @@ PrefabInstance:
     - target: {fileID: 5644493574289614242, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_RaycastMask.m_Bits
       value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7277802327414017196, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7434851320941268098, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
       propertyPath: m_AnchorMax.y
@@ -7233,3 +7310,4 @@ SceneRoots:
   - {fileID: 679963954}
   - {fileID: 1211533716}
   - {fileID: 1521898872}
+  - {fileID: 36714267}
