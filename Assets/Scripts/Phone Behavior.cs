@@ -72,8 +72,11 @@ public class PhoneBehavior : MonoBehaviour
     /// </summary>
     private void ForceDrop()
     {
-        // Use the selecct exit funtion to make it stop selecting it, and cause it to drop
-        GrabInteractable.interactionManager.SelectExit(GrabInteractable.firstInteractorSelecting,GrabInteractable);
+        // Use the select cancel funtion to make it stop selecting it, and cause it to drop
+        // This is done to ensure that the "select cancled" event is called, so that I can play haptics on the dropped phone. 
+        GrabInteractable.interactionManager.SelectCancel(GrabInteractable.firstInteractorSelecting,GrabInteractable);
         GrabInteractable.enabled = false;
     }
+
+    
 }
