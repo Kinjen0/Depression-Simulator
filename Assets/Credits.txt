@@ -17,3 +17,10 @@ https://assetstore.unity.com/packages/3d/environments/landscapes/terrain-sample-
 
 Phone
 https://assetstore.unity.com/packages/3d/props/free-phone-181455
+
+Wall texture for Hallway
+ambientCG.com/a/Plaster001 
+
+
+Learning about Lerp
+https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/#lerp_with_easing
