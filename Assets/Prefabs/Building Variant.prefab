@@ -1124,6 +1124,11 @@ MonoBehaviour:
       m_Calls: []
   dropCollisionSound: {fileID: 0}
   canPlaySound: 0
+  textMessages:
+  - 'Who should I call? Is it worth it?  '
+  - Would they even care? Or am I just a burden to them?
+  - 'Do I even deserve to ask for help?  '
+  phoneText: {fileID: 0}
   leftController: {fileID: 0}
   rightController: {fileID: 0}
 --- !u!114 &7561875161696766237

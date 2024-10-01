@@ -7,6 +7,7 @@ using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.Transformers;
+using TMPro;
 
 
 /// <summary>
@@ -33,6 +34,10 @@ public class PhoneBehavior : MonoBehaviour
     public AudioSource dropCollisionSound;
     public bool canPlaySound;
 
+    // Text messages for the player
+    [SerializeField] private string[] textMessages;
+    [SerializeField] private TextMeshProUGUI phoneText;
+
     // So I need to also send haptic impulses to the controllers
     [SerializeField] XRBaseController leftController;
     [SerializeField] XRBaseController rightController;
@@ -54,8 +59,8 @@ public class PhoneBehavior : MonoBehaviour
             timeSinceGrab += Time.deltaTime;
             if (timeSinceGrab > holdTimer * timesPickedUp)
             {
-                ForceDrop(); // To be implemented. 
-                timesPickedUp++;
+                ForceDrop(); // Force the phone to be dropped
+                timesPickedUp++; // Update after dropping the phone
                 timeSinceGrab = 0;
             }
         }
@@ -108,14 +113,20 @@ public class PhoneBehavior : MonoBehaviour
             controller.SendHapticImpulse(.2f, .5f);
         }
 
-
+        loadNextTextMessage(timesPickedUp - 1);
         GrabInteractable.interactionManager.SelectCancel(GrabInteractable.firstInteractorSelecting,GrabInteractable);
         GrabInteractable.enabled = false;
         canPlaySound = true;
     }
 
-    // First lets make a quick function to figure out which interactor
-
+    // Function to update the text message whenever the phone is dropped. 
+    public void loadNextTextMessage(int stringIndex)
+    {
+        if (phoneText != null)
+        {
+            phoneText.text = textMessages[stringIndex % textMessages.Length]; // Mod length to resolve errors
+        }
+    }
 
 
 }
