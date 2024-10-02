@@ -38,10 +38,7 @@ public class PhoneBehavior : MonoBehaviour
     [SerializeField] private string[] textMessages;
     [SerializeField] private TextMeshProUGUI phoneText;
 
-    // So I need to also send haptic impulses to the controllers
-    [SerializeField] XRBaseController leftController;
-    [SerializeField] XRBaseController rightController;
-    
+
 
     public void Start()
     {
