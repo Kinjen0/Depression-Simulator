@@ -17,6 +17,11 @@ public class PhoneBehavior : MonoBehaviour
 {
     private XRGrabInteractable GrabInteractable;
 
+    // VoiceLinePlayer for the voiceLines we want to play
+    public VoiceLinePlayer voiceLinePlayer;
+
+    public List<AudioClip> voiceLinesList;
+
     [SerializeField] private double holdTimer;
     private double timeSinceGrab;
 
@@ -29,7 +34,7 @@ public class PhoneBehavior : MonoBehaviour
     private double timeSinceDrop;
 
     // Potential Event to use to manage the task completion
-    public UnityEvent PhoneDone;
+    public Task phoneTask;
 
     public AudioSource dropCollisionSound;
     public bool canPlaySound;
@@ -54,10 +59,13 @@ public class PhoneBehavior : MonoBehaviour
         {
             // If it is selected, then we can work on the timer
             timeSinceGrab += Time.deltaTime;
-            if (timeSinceGrab > holdTimer * timesPickedUp)
+            if (timeSinceGrab > holdTimer)
             {
-                ForceDrop(); // Force the phone to be dropped
-                timesPickedUp++; // Update after dropping the phone
+                // Force the phone to be dropped
+                ForceDrop(); 
+                // Play the voiceLine for this drop
+                voiceLinePlayer.PlayVoiceLine(voiceLinesList[timesPickedUp - 1]);
+                timesPickedUp++;
                 timeSinceGrab = 0;
             }
         }
@@ -65,6 +73,7 @@ public class PhoneBehavior : MonoBehaviour
         {
             timeSinceGrab = 0;
         }
+        // Track time since the phone was dropped, and make sure it can be re-enabled after it
         if(!GrabInteractable.enabled)
         {
             timeSinceDrop += Time.deltaTime;
@@ -77,6 +86,11 @@ public class PhoneBehavior : MonoBehaviour
         else
         {
             timeSinceDrop = 0;
+        }
+        // If we are completly done
+        if(!phoneTask.isCompleted && timesPickedUp >= timesToBePickedUp)
+        {
+            phoneTask.CompleteTask();
         }
     }
 
