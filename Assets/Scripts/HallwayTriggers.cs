@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 // This script lets me attach voice Lines to triggers and play them
 public class HallwayTriggers : MonoBehaviour
@@ -9,6 +10,8 @@ public class HallwayTriggers : MonoBehaviour
 
     public AudioClip clip;
     public VoiceLinePlayer voiceLinePlayer;
+    public UnityEvent reachedPoint;
+
 
     public void OnTriggerEnter(Collider other)
     {
@@ -16,6 +19,7 @@ public class HallwayTriggers : MonoBehaviour
         {
             voiceLinePlayer.PlayVoiceLine(clip);
             hasPlayed = true;
+            reachedPoint.Invoke();
         }
     }
 }

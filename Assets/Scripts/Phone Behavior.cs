@@ -34,7 +34,8 @@ public class PhoneBehavior : MonoBehaviour
     private double timeSinceDrop;
 
     // Potential Event to use to manage the task completion
-    public Task phoneTask;
+    public TaskList taskList;
+    public int taskIndex;
 
     public AudioSource dropCollisionSound;
     public bool canPlaySound;
@@ -88,9 +89,9 @@ public class PhoneBehavior : MonoBehaviour
             timeSinceDrop = 0;
         }
         // If we are completly done
-        if(!phoneTask.isCompleted && timesPickedUp >= timesToBePickedUp)
+        if(!taskList.getTask(taskIndex).isCompleted && timesPickedUp >= timesToBePickedUp)
         {
-            phoneTask.CompleteTask();
+            taskList.MarkTaskComplete(taskIndex);
         }
     }
 

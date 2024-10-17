@@ -12,6 +12,7 @@ public class Task : MonoBehaviour
     public string taskName;
     public bool isCompleted;
     public UnityEvent onTaskCompleted;
+    public string taskDescription;
 
     public void CompleteTask()
     {
