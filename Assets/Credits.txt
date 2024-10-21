@@ -27,3 +27,6 @@ https://gamedevbeginner.com/the-right-way-to-lerp-in-unity-with-examples/#lerp_w
 
 Add newline to string in text mesh pro
 https://stackoverflow.com/questions/72006713/textmeshpro-not-properly-displaying-n-new-lines
+
+Create a Save-System for my game. 
+https://www.youtube.com/watch?v=aUi9aijvpgs&t=74s

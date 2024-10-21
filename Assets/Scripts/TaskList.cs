@@ -25,6 +25,8 @@ public class TaskList : MonoBehaviour
         return tasks[index];
     }
 
+
+
     public void CheckTasksCompleted()
     {
         foreach (Task task in tasks)
@@ -71,6 +73,7 @@ public class TaskList : MonoBehaviour
             UpdateTaskListUI();
             // Then we just check if they are all complete
             CheckTasksCompleted();
+            SaveDataManager.Instance.ForceSaveGame();
         }
     }    
 }
