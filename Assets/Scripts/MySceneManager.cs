@@ -16,10 +16,13 @@ public class My_Scene_Manager : MonoBehaviour, IDataSaveInterface
 
     private void Start()
     {
-        SaveDataManager.Instance.LoadGame();
-        if(SceneManager.GetActiveScene().buildIndex != 0)
+        if (SaveDataManager.Instance != null)
         {
-            SaveDataManager.Instance.ForceSaveGame();
+            SaveDataManager.Instance.LoadGame();
+            if (SceneManager.GetActiveScene().buildIndex != 0)
+            {
+                SaveDataManager.Instance.ForceSaveGame();
+            }
         }
     }
 
