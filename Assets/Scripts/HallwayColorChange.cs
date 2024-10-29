@@ -14,10 +14,10 @@ public class HallwayColorChange : MonoBehaviour
     public Volume postProcessVolume;
 
     private ColorAdjustments colorAdjustments;
-    private float startX = 192f;
-    private float endX = 110f;
+    private float startX = 0f;
+    private float endX = 90f;
     private float farthestPlayer; 
-    private float initialSaturation = -100; 
+    private float initialSaturation; 
     private float targetSaturation = 0f; 
     private bool doneChanging = false;
 
@@ -47,19 +47,19 @@ public class HallwayColorChange : MonoBehaviour
         if (!doneChanging && colorAdjustments != null)
         {
             float playerX = player.position.x;
-
+            Debug.Log(playerX);
             // Make sure the Effect wont reverse if the player goes back a bit
-            if (playerX <= farthestPlayer)
+            if (playerX >= farthestPlayer && playerX != 0) 
             {
                 // Figure out how far along the player is
-                float t = Mathf.InverseLerp(startX, endX, playerX);
-
+                float playerProgress = playerX / endX;
+                Debug.Log(playerProgress);
                 // Adjust the values slowly as the player crosses the hallway, Lerp functions are great. 
-                colorAdjustments.saturation.value = Mathf.Lerp(initialSaturation, targetSaturation, t);
-                colorAdjustments.colorFilter.value = Color.Lerp(initialColor, targetColor, t);
+                colorAdjustments.saturation.value = Mathf.Lerp(initialSaturation, targetSaturation, playerProgress);
+                colorAdjustments.colorFilter.value = Color.Lerp(initialColor, targetColor, playerProgress);
 
                 farthestPlayer = player.transform.position.x;
-                if (playerX <= endX)
+                if (playerX >= endX)
                 {
                     doneChanging = true;
                 }
