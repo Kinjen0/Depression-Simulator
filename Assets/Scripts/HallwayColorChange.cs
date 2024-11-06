@@ -25,6 +25,16 @@ public class HallwayColorChange : MonoBehaviour
     private Color initialColor;
     private Color targetColor = Color.white;
 
+    // Light Objects for the scene
+    public Light directionalLight;
+    public float startLightIntensity;
+    public float endLightIntensity;
+
+    public Light flashlight;
+    public float startFlashlightIntensity;
+    public float endFlashlightIntensity;
+
+
     void Start()
     {
         // Try to grab the color adjustments
@@ -39,6 +49,8 @@ public class HallwayColorChange : MonoBehaviour
         {
             Debug.LogError("Cannot find ColorAdjustments.");
         }
+        startLightIntensity = directionalLight.intensity;
+        startFlashlightIntensity = flashlight.intensity;
     }
 
     void Update()
@@ -63,7 +75,19 @@ public class HallwayColorChange : MonoBehaviour
                 {
                     doneChanging = true;
                 }
+                // This can convert me to a progress,
+                float playerLightProgress = (player.position.x / endX);
+                // Here, we want the flashlight to decrease in intensity until about halfway, wherein it goes completly out.
+                if (player.transform.position.x <= endX / 2) // We start at about 0
+                {
+                    flashlight.intensity = Mathf.Lerp(startFlashlightIntensity, endFlashlightIntensity, playerLightProgress * 2);
+                }
+                else // Once we pass the halfway point, I want to start working with the directional light, and make it increase
+                {   //                                                                                  subtract 0.5 to artifically cut the progress in half so it stays low, and slowly rises
+                    directionalLight.intensity = Mathf.Lerp(startLightIntensity, endLightIntensity, (playerLightProgress - 0.5f) * 2);
+                }
             }
         }
+
     }
 }

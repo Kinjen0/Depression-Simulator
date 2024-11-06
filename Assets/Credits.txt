@@ -30,3 +30,7 @@ https://stackoverflow.com/questions/72006713/textmeshpro-not-properly-displaying
 
 Create a Save-System for my game. 
 https://www.youtube.com/watch?v=aUi9aijvpgs&t=74s
+
+
+Thanks to this wonderful post for telling me how I can make the UI always on top. Hopefully it works. 
+https://www.reddit.com/r/Unity3D/comments/pne8xw/unity_urpcinemachine_always_show_world_space_ui/

@@ -73,7 +73,10 @@ public class TaskList : MonoBehaviour
             UpdateTaskListUI();
             // Then we just check if they are all complete
             CheckTasksCompleted();
-            SaveDataManager.Instance.ForceSaveGame();
+            if (SaveDataManager.Instance != null)
+            {
+                SaveDataManager.Instance.ForceSaveGame();
+            }
         }
     }    
 }

@@ -14,14 +14,6 @@ public class HallwayScript : MonoBehaviour
     public float minimumDistance = 1f;
     public float maximumDistance = 1f;
 
-    // Light Objects for the scene
-    public Light directionalLight;
-    public float startLightIntensity;
-    public float endLightIntensity;
-
-    public Light flashlight;
-    public float startFlashlightIntensity;
-    public float endFlashlightIntensity;
 
 
 
@@ -30,8 +22,7 @@ public class HallwayScript : MonoBehaviour
         // So we want to just initialize the distances, in case they are not perfectly set
         farDoor.position = new Vector3(player.position.x + minimumDistance, farDoor.position.y, farDoor.position.z);
         closeDoor.position = new Vector3(player.position.x - maximumDistance, closeDoor.position.y, closeDoor.position.z);
-        startLightIntensity = directionalLight.intensity;
-        startFlashlightIntensity = flashlight.intensity;
+
         playerStartingX = player.position.x;
     }
 
@@ -54,11 +45,7 @@ public class HallwayScript : MonoBehaviour
                 closeDoor.position = new Vector3(player.position.x - maximumDistance, closeDoor.position.y, closeDoor.position.z);
             }
         }
-        // This can convert me to a progress,
-        float playerProgress = (player.position.x / 100);
 
-        //Debug.Log(playerProgress);
-        directionalLight.intensity = Mathf.Lerp(startLightIntensity, endLightIntensity, playerProgress);
         
     }
 
