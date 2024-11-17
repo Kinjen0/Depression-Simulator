@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.0754717, g: 0.07297971, b: 0.043137256, a: 1}
+  m_AmbientSkyColor: {r: 0.0009765625, g: 0.0009765625, b: 0.0009765625, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -192,6 +192,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1979146715112362272, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_TeleportMode
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979146715112362272, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_TeleportInteractor
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979146715112362272, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_TeleportModeCancel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1979146715112362272, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_NearFarEnableTeleportDuringNearInteraction
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3328822560062731957, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -324,6 +340,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5597843017383856005, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6214810749579440367, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
       propertyPath: m_SizeDelta.x
       value: 0
@@ -435,6 +455,18 @@ PrefabInstance:
     - target: {fileID: 6214810751541861874, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6327113172115096491, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363750012177209719, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363750012177209723, guid: 91dc2b596ce1fdf4c9c381ca4e673d12, type: 3}
+      propertyPath: m_Handedness
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1978,7 +2010,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ef2229313074cd342b37c2565625b423, type: 2}
+  - {fileID: 2100000, guid: dcac969f335985b47a7dd104e05496d9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3015,7 +3047,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -3408,7 +3440,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 0.9708928, b: 0.8915094, a: 1}
   m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
@@ -3529,7 +3561,7 @@ MonoBehaviour:
   postProcessVolume: {fileID: 1569883587}
   directionalLight: {fileID: 1569211567}
   startLightIntensity: 0
-  endLightIntensity: 1
+  endLightIntensity: 2
   flashlight: {fileID: 112039884}
   startFlashlightIntensity: 0
   endFlashlightIntensity: 0
@@ -4277,7 +4309,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e46b1543ed4b15e4a8819109b715a197, type: 2}
+  - {fileID: 2100000, guid: 1db0e90b9a3b07943b75591b4e452a96, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

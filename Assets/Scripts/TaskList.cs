@@ -48,8 +48,8 @@ public class TaskList : MonoBehaviour
         {
             if (tasks[i].isCompleted)
             {
-                // Make use of color tags to make it more obvious that its done.
-                newText += "<color=grey>" + tasks[i].taskDescription + " (Complete)" + "</color>";
+                // Make use of color tags as well as strikethrough to make it more obvious that its done.
+                newText += "<color=#dbdbdb><s>" + tasks[i].taskDescription + " (Complete)" + "</s></color>";
             }
             else
             {

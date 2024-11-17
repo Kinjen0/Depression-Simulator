@@ -34,3 +34,6 @@ https://www.youtube.com/watch?v=aUi9aijvpgs&t=74s
 
 Thanks to this wonderful post for telling me how I can make the UI always on top. Hopefully it works. 
 https://www.reddit.com/r/Unity3D/comments/pne8xw/unity_urpcinemachine_always_show_world_space_ui/
+
+Fog Wall
+https://discussions.unity.com/t/how-do-i-make-a-fog-wall/130216/2
