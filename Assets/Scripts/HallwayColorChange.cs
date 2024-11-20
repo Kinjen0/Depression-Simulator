@@ -82,9 +82,9 @@ public class HallwayColorChange : MonoBehaviour
                 {
                     flashlight.intensity = Mathf.Lerp(startFlashlightIntensity, endFlashlightIntensity, playerLightProgress * 2);
                 }
-                else // Once we pass the halfway point, I want to start working with the directional light, and make it increase
+                else if (player.transform.position.x >= endX/2 + 10) // Once we pass the halfway point, I want to start working with the directional light, and make it increase
                 {   //                                                                                  subtract 0.5 to artifically cut the progress in half so it stays low, and slowly rises
-                    directionalLight.intensity = Mathf.Lerp(startLightIntensity, endLightIntensity, (playerLightProgress - 0.5f) * 2);
+                    directionalLight.intensity = Mathf.Lerp(startLightIntensity, endLightIntensity, (playerLightProgress - 0.6f) * 2);
                 }
             }
         }
