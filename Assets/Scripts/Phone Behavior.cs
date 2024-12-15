@@ -8,6 +8,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
 using UnityEngine.XR.Interaction.Toolkit.Transformers;
 using TMPro;
+using Unity.Mathematics;
 
 
 /// <summary>
@@ -44,6 +45,9 @@ public class PhoneBehavior : MonoBehaviour
     [SerializeField] private string[] textMessages;
     [SerializeField] private TextMeshProUGUI phoneText;
 
+    private Vector3 startPosition;
+    private quaternion startRotation;
+
 
 
     public void Start()
@@ -52,6 +56,8 @@ public class PhoneBehavior : MonoBehaviour
         timeSinceGrab = 0;
         timesPickedUp = 1;
         timeSinceDrop = 0;
+        startPosition = this.gameObject.transform.position;
+        startRotation = this.gameObject.transform.rotation;
     }
     private void Update()
     {
@@ -95,6 +101,7 @@ public class PhoneBehavior : MonoBehaviour
         }
     }
 
+    /* Replaced with code in the forceDrop section
     public void OnCollisionEnter(Collision collision)
     {
         if(canPlaySound && !collision.gameObject.CompareTag("Player"))
@@ -103,6 +110,7 @@ public class PhoneBehavior : MonoBehaviour
             canPlaySound = false;
         }
     }
+    */
 
     /// <summary>
     /// Function to force the object to be dropped
@@ -129,6 +137,11 @@ public class PhoneBehavior : MonoBehaviour
         GrabInteractable.interactionManager.SelectCancel(GrabInteractable.firstInteractorSelecting,GrabInteractable);
         GrabInteractable.enabled = false;
         canPlaySound = true;
+
+        this.gameObject.transform.position = startPosition;
+        this.gameObject.transform.rotation = startRotation;
+        dropCollisionSound.Play();
+
     }
 
     // Function to update the text message whenever the phone is dropped. 

@@ -15,16 +15,16 @@ EditorBuildSettings:
     path: Assets/Scenes/01-Starting Scene.unity
     guid: c45a2deacb0850d4a957a2cfb9c00ebe
   - enabled: 1
-    path: Assets/Scenes/02-Bed Scene.unity
+    path: Assets/Scenes/03-Bed Scene.unity
     guid: 224c5f947a15aed47b6ef11723f86814
   - enabled: 1
-    path: Assets/Scenes/03-Bedroom Scene.unity
+    path: Assets/Scenes/04-Bedroom Scene.unity
     guid: 998e0a4ae9b47de449571b1578743ac7
   - enabled: 1
-    path: Assets/Scenes/04-Hallway Scene.unity
+    path: Assets/Scenes/05-Hallway Scene.unity
     guid: 0b1ea8b19aac7094f9151b5ff08a640b
   - enabled: 1
-    path: Assets/Scenes/05=Ending Scene.unity
+    path: Assets/Scenes/06=Ending Scene.unity
     guid: fce415c11f5d7a14d81446dc31937993
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
