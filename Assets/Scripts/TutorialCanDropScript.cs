@@ -10,12 +10,16 @@ public class TutorialCanDropScript : MonoBehaviour
     private XRGrabInteractable GrabInteractable;
     private Vector3 startingPosition;
     private Quaternion startingRotation;
-    private float timeSinceDrop = 0; 
+    private float timeSinceDrop = 0;
+
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip soundEffect;
     private void Start()
     {
         GrabInteractable = GetComponent<XRGrabInteractable>();
         startingPosition = this.gameObject.transform.position;
         startingRotation = this.gameObject.transform.rotation;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -55,7 +59,7 @@ public class TutorialCanDropScript : MonoBehaviour
         }
 
         GrabInteractable.interactionManager.SelectCancel(GrabInteractable.firstInteractorSelecting, GrabInteractable);
-
+        audioSource.PlayOneShot(soundEffect);
         // Return it to its origional location
         this.gameObject.transform.position = startingPosition;
         this.gameObject.transform.rotation = startingRotation;
