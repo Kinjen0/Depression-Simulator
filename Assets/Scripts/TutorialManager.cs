@@ -44,7 +44,7 @@ public class TutorialManager : MonoBehaviour
     private void onMove()
     {
         var moveVal = moveAction.ReadValue<Vector2>();
-        if (moveVal.x >= 0.2 || moveVal.y >= 0.2) // Mitigating potential issues with stick drift, and only counting large movements
+        if (moveVal.x >= 0.2 || moveVal.x <= 0.2 || moveVal.y >= 0.2 || moveVal.y <= 0.2) // Mitigating potential issues with stick drift, and only counting large movements
         {
             taskList.MarkTaskComplete(0);
             Debug.Log("Player Has Moved");

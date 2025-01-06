@@ -196,16 +196,28 @@ PrefabInstance:
       value: Soda Can Red Crushed
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: c8123449a980e6c438fa9bb06277785a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: c8123449a980e6c438fa9bb06277785a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: c8123449a980e6c438fa9bb06277785a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: c8123449a980e6c438fa9bb06277785a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.29192305
+      value: 0.312
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: c8123449a980e6c438fa9bb06277785a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.160949
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: c8123449a980e6c438fa9bb06277785a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.268372
+      value: -17.263
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: c8123449a980e6c438fa9bb06277785a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -339,7 +351,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 45321207}
+        m_TargetAssemblyTypeName: TutorialCanDropScript, Assembly-CSharp
+        m_MethodName: StartReturnToTable
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1110,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d2f2f0215d2d429493edbc395a486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: ChessPieceTask
+  taskName: MoveTask
   isCompleted: 0
   onTaskCompleted:
     m_PersistentCalls:
@@ -1125,12 +1149,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1560854807}
     m_Modifications:
     - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.9146
       objectReference: {fileID: 0}
     - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.1139
+      value: 6.9879003
       objectReference: {fileID: 0}
     - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1272,7 +1308,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 472107793}
+        m_TargetAssemblyTypeName: TutorialCanDropScript, Assembly-CSharp
+        m_MethodName: StartReturnToTable
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1685,7 +1733,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.050949
+      value: 6.924949
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1735,6 +1783,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 100000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 799149217}
+    - targetCorrespondingSourceObject: {fileID: 100000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 799149218}
   m_SourcePrefab: {fileID: 100100000, guid: 53ee823ff543aa24d855d8f9f8c2b87b, type: 3}
 --- !u!4 &799149210 stripped
 Transform:
@@ -1822,7 +1873,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 799149212}
+        m_TargetAssemblyTypeName: TutorialCanDropScript, Assembly-CSharp
+        m_MethodName: StartReturnToTable
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1920,7 +1983,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &799149217
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2017,6 +2080,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &799149218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799149211}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.07008483, y: 0.14368327, z: 0.006549458}
+  m_Center: {x: -0.00000023841858, y: 0, z: -0.00047159294}
 --- !u!1 &883543015
 GameObject:
   m_ObjectHideFlags: 0
@@ -2105,12 +2189,24 @@ PrefabInstance:
       value: Soda Can Red
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: dcbc01726f8551e4895aa72699112ee4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: dcbc01726f8551e4895aa72699112ee4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: dcbc01726f8551e4895aa72699112ee4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: dcbc01726f8551e4895aa72699112ee4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.632
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: dcbc01726f8551e4895aa72699112ee4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.174
+      value: 6.987
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: dcbc01726f8551e4895aa72699112ee4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2248,7 +2344,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 918722094}
+        m_TargetAssemblyTypeName: TutorialCanDropScript, Assembly-CSharp
+        m_MethodName: StartReturnToTable
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2541,12 +2649,24 @@ PrefabInstance:
       value: Soda Can Orange
       objectReference: {fileID: 0}
     - target: {fileID: 8319016939627517206, guid: ee6951d938497174989b85bc977b2e7a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319016939627517206, guid: ee6951d938497174989b85bc977b2e7a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319016939627517206, guid: ee6951d938497174989b85bc977b2e7a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8319016939627517206, guid: ee6951d938497174989b85bc977b2e7a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.168
       objectReference: {fileID: 0}
     - target: {fileID: 8319016939627517206, guid: ee6951d938497174989b85bc977b2e7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.226
+      value: 7.012
       objectReference: {fileID: 0}
     - target: {fileID: 8319016939627517206, guid: ee6951d938497174989b85bc977b2e7a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2684,7 +2804,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1036688915}
+        m_TargetAssemblyTypeName: TutorialCanDropScript, Assembly-CSharp
+        m_MethodName: StartReturnToTable
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2887,12 +3019,24 @@ PrefabInstance:
       value: Soda Can Green Crushed
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: f02a92e1ab7d32d4fad570cd12c80c3e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: f02a92e1ab7d32d4fad570cd12c80c3e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: f02a92e1ab7d32d4fad570cd12c80c3e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4536291819999006714, guid: f02a92e1ab7d32d4fad570cd12c80c3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.461
+      value: -0.441
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: f02a92e1ab7d32d4fad570cd12c80c3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.174
+      value: 7.008
       objectReference: {fileID: 0}
     - target: {fileID: 4536291819999006714, guid: f02a92e1ab7d32d4fad570cd12c80c3e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3030,7 +3174,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1047688562}
+        m_TargetAssemblyTypeName: TutorialCanDropScript, Assembly-CSharp
+        m_MethodName: StartReturnToTable
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3547,7 +3703,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2e9ed32f32a4d6c4fa0384a2b1a7806d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.26
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 2e9ed32f32a4d6c4fa0384a2b1a7806d, type: 3}
       propertyPath: m_LocalScale.z
@@ -4757,12 +4913,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 1560854807}
     m_Modifications:
     - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0043564
+      value: -1.028
       objectReference: {fileID: 0}
     - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.160949
+      value: 6.991
       objectReference: {fileID: 0}
     - target: {fileID: 6988246613009678934, guid: aa391fa7c7d49314785fa3f647c03048, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4904,7 +5072,19 @@ MonoBehaviour:
         m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1887297125}
+        m_TargetAssemblyTypeName: TutorialCanDropScript, Assembly-CSharp
+        m_MethodName: StartReturnToTable
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_FirstFocusEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -5395,7 +5575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d2f2f0215d2d429493edbc395a486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: PhoneTask
+  taskName: TurnTask
   isCompleted: 0
   onTaskCompleted:
     m_PersistentCalls:
@@ -5608,7 +5788,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c43d2f2f0215d2d429493edbc395a486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  taskName: TrashTask
+  taskName: GrabTask
   isCompleted: 0
   onTaskCompleted:
     m_PersistentCalls:

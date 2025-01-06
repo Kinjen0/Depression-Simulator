@@ -32,6 +32,7 @@ public class TutorialCanDropScript : MonoBehaviour
             {
                 ForceDrop();
             }
+            StopAllCoroutines();
         }
         else
         {
@@ -60,8 +61,26 @@ public class TutorialCanDropScript : MonoBehaviour
 
         GrabInteractable.interactionManager.SelectCancel(GrabInteractable.firstInteractorSelecting, GrabInteractable);
         audioSource.PlayOneShot(soundEffect);
+        ReturnToStart();
+    }
+
+    // Helper function to return the object to its starting position. 
+    private void ReturnToStart()
+    {
         // Return it to its origional location
         this.gameObject.transform.position = startingPosition;
         this.gameObject.transform.rotation = startingRotation;
+    }
+
+    public void StartReturnToTable(int waitTime)
+    {
+        StartCoroutine(ReturnToTable(waitTime));
+    }
+
+    private IEnumerator ReturnToTable(int waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        audioSource.PlayOneShot(soundEffect);
+        ReturnToStart();
     }
 }

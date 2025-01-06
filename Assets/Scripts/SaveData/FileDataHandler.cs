@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.IO;
-// https://www.youtube.com/watch?v=aUi9aijvpgs&t=74s
+/// <summary>
+/// File saving system largely taken from this video
+/// https://www.youtube.com/watch?v=aUi9aijvpgs
+/// </summary>&t=74s
 public class FileDataHandler
 {
     private string dataDirPath = "";
